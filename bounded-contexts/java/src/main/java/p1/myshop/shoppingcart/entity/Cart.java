@@ -1,4 +1,4 @@
-package p1.myshop.services.shoppingcart;
+package p1.myshop.shoppingcart.entity;
 
 import java.util.List;
 
@@ -6,13 +6,13 @@ import java.util.List;
  * @author <a href="http://twitter.com/aloyer">@aloyer</a>
  */
 public class Cart {
-    private final List<CartItem> items;
+    private final List<CartLine> items;
 
-    public Cart(List<CartItem> items) {
+    public Cart(List<CartLine> items) {
         this.items = items;
     }
 
-    public List<CartItem> items() {
+    public List<CartLine> items() {
         return items;
     }
 }

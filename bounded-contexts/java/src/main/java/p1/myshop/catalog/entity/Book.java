@@ -1,8 +1,8 @@
-package p1.myshop.entities;
+package p1.myshop.catalog.entity;
 
-public class Book implements Item {
+public class Book implements Product {
     @Override
-    public ItemId itemId() {
+    public ProductId productId() {
         return null;
     }
 

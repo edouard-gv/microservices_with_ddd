@@ -1,8 +1,8 @@
-package p1.myshop.entities;
+package p1.myshop.catalog.entity;
 
-public class Dvd implements Item {
+public class Dvd implements Product {
     @Override
-    public ItemId itemId() {
+    public ProductId productId() {
         return null;
     }
 

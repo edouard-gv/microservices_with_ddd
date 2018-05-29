@@ -1,13 +1,10 @@
-package p1.myshop.services.shoppingcart;
+package p1.myshop.shoppingcart.entity;
 
-import p1.myshop.entities.ItemId;
-import p1.myshop.entities.Quantity;
-
-public class CartItem {
+public class CartLine {
     public final ItemId itemId;
     public final Quantity quantity;
 
-    public CartItem(ItemId itemId, Quantity quantity) {
+    public CartLine(ItemId itemId, Quantity quantity) {
         this.itemId = itemId;
         this.quantity = quantity;
     }
