@@ -10,18 +10,18 @@ import java.util.stream.Collectors;
 
 public class ItemMapper {
 
-    private static Deliverable buildDeliverableFromProduct(Product product) {
-        return new Deliverable(DeliverableId.from(product.productId().toString()), product.weight());
+    private static Item buildDeliverableFromProduct(Product product) {
+        return new Item(ItemId.from(product.productId().toString()), product.weight());
     }
 
     private static Quantity orderQuantityFromCartQuantity(p1.myshop.shoppingcart.entity.Quantity cartQuantity) {
         return null;
     }
 
-    public static Order buildOrderFromCart(Cart cart, CatalogService catalogService) {
-        return new Order(
+    public static Delivery buildOrderFromCart(Cart cart, CatalogService catalogService) {
+        return new Delivery(
                 cart.items().stream()
-                        .map(cartLine -> new OrderLine(
+                        .map(cartLine -> new DeliveryLine(
                                 buildDeliverableFromProduct(catalogService.loadItem(ProductId.from(cartLine.itemId.toString()))),
                                 orderQuantityFromCartQuantity(cartLine.quantity)))
                         .collect(Collectors.toList())

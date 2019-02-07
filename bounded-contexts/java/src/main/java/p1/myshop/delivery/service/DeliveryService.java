@@ -1,12 +1,12 @@
 package p1.myshop.delivery.service;
 
-import p1.myshop.delivery.entity.Order;
+import p1.myshop.delivery.entity.Delivery;
 
 public class DeliveryService {
 
-    public double calculateOrderWeight(Order order) {
-        return order.items().stream()
-                .mapToDouble(orderLine -> orderLine.quantity.quantity() * orderLine.deliverable.weight())
+    public double calculateOrderWeight(Delivery delivery) {
+        return delivery.items().stream()
+                .mapToDouble(orderLine -> orderLine.quantity.quantity() * orderLine.item.weight())
                 .sum();
     }
 }
