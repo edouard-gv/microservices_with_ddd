@@ -1,8 +1,8 @@
 package p1.myshop.adaptor;
 
 import p1.myshop.adaptor.shoppingcart.ProductionDeliveryAdapter;
-import p1.myshop.core.shoppingcart.Cart;
-import p1.myshop.core.shoppingcart.ShoppingCartService;
+import p1.myshop.shoppingcart.entity.Cart;
+import p1.myshop.shoppingcart.service.ShoppingCartService;
 
 import java.util.ArrayList;
 
